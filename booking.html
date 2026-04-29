@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线预约 | 严氏风水</title>
+    <meta name="description" content="在线预约严氏风水服务，体验专业的风水咨询服务。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">严氏风水</a>
+            <nav class="nav">
+                <a href="index.html">首页</a>
+                <a href="services.html">服务项目</a>
+                <a href="about.html">关于严老师</a>
+                <a href="booking.html" class="active">在线预约</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>在线预约</h1>
+            <p>填写预约信息，我们将在24小时内与您联系</p>
+        </div>
+    </section>
+
+    <section class="section booking-section">
+        <div class="container">
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label>预约服务类型 <span class="required">*</span></label>
+                    <select name="service" required>
+                        <option value="">请选择服务类型</option>
+                        <option value="yangzhai">阳宅风水（568元/㎡起）</option>
+                        <option value="yinzhai">阴宅风水（5688元/日起）</option>
+                        <option value="zeyue">择日选时（568元起）</option>
+                        <option value="mingli">命理综合（面议）</option>
+                        <option value="qiming">起名服务（5168元起）</option>
+                    </select>
+                    <div class="error-message">请选择服务类型</div>
+                </div>
+
+                <div class="form-group">
+                    <label>预约方式 <span class="required">*</span></label>
+                    <select name="method" required>
+                        <option value="">请选择预约方式</option>
+                        <option value="onsite">现场考察</option>
+                        <option value="video">远程视频</option>
+                        <option value="phone">电话/语音咨询</option>
+                        <option value="wechat">微信沟通</option>
+                    </select>
+                    <div class="error-message">请选择预约方式</div>
+                </div>
+
+                <div class="form-group">
+                    <label>期望预约时间</label>
+                    <input type="date" name="preferredDate" id="preferredDate">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>您的姓名 <span class="required">*</span></label>
+                        <input type="text" name="name" required placeholder="请输入您的姓名">
+                        <div class="error-message">请输入您的姓名</div>
+                    </div>
+                    <div class="form-group">
+                        <label>联系电话 <span class="required">*</span></label>
+                        <input type="tel" name="phone" required placeholder="请输入您的手机号码">
+                        <div class="error-message">请输入正确的手机号码</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>出生日期（用于八字分析）</label>
+                    <input type="date" name="birthdate" value="1990-01-01">
+                </div>
+
+                <div class="form-group">
+                    <label>备注/特殊需求</label>
+                    <textarea name="notes" placeholder="请描述您的具体需求或问题，例如：房屋地址、具体咨询事项等"></textarea>
+                </div>
+
+                <button type="submit" class="btn">提交预约</button>
+
+                <p style="text-align: center; margin-top: 20px; color: var(--text-light); font-size: 14px;">
+                    提交预约后，我们将在24小时内与您联系确认
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container">
+            <h2>更多咨询方式</h2>
+            <p>您也可以通过电话或微信直接联系我们</p>
+            <a href="contact.html" class="btn">查看联系方式</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>严氏风水</h3>
+                    <p>严氏风水第八代传人，华南易学会副理事长单位。十余年易学研究实战经验，为众多企业和个人提供专业风水咨询服务。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="about.html">关于严老师</a></li>
+                        <li><a href="booking.html">在线预约</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="services.html#yangzhai">阳宅风水</a></li>
+                        <li><a href="services.html#yinzhai">阴宅风水</a></li>
+                        <li><a href="services.html#zeyue">择日选时</a></li>
+                        <li><a href="services.html#qiming">起名服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p>电话：13524763519</p>
+                    <p>微信：ga351419</p>
+                    <p>地址：上海市青浦区崧雅路166弄1号1209室</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 严氏风水 版权所有 | 华南易学会副理事长</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.querySelector('input[name="preferredDate"]');
+            if (dateInput) {
+                const today = new Date();
+                const tomorrow = new Date(today);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                dateInput.min = tomorrow.toISOString().split('T')[0];
+            }
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            if (serviceParam) {
+                const serviceSelect = document.querySelector('select[name="service"]');
+                if (serviceSelect) {
+                    serviceSelect.value = serviceParam;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
