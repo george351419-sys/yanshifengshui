@@ -25,16 +25,60 @@ function mobileMenuToggle() {
 
     if (!menuBtn || !nav) return;
 
+    menuBtn.setAttribute('role', 'button');
+    menuBtn.setAttribute('tabindex', '0');
+    menuBtn.setAttribute('aria-label', '打开导航菜单');
+    menuBtn.setAttribute('aria-expanded', 'false');
+
+    function closeMenu() {
+        menuBtn.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', '打开导航菜单');
+    }
+
+    function toggleMenu() {
+        const isOpen = menuBtn.classList.toggle('active');
+        nav.classList.toggle('active', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
+    }
+
     menuBtn.addEventListener('click', function() {
-        menuBtn.classList.toggle('active');
-        nav.classList.toggle('active');
+        toggleMenu();
+    });
+
+    menuBtn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
     });
 
     document.querySelectorAll('.nav a').forEach(link => {
         link.addEventListener('click', function() {
-            menuBtn.classList.remove('active');
-            nav.classList.remove('active');
+            closeMenu();
         });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!nav.classList.contains('active')) return;
+        if (nav.contains(e.target) || menuBtn.contains(e.target)) return;
+        closeMenu();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
     });
 }
 
